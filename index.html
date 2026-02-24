@@ -316,8 +316,8 @@
     const formData = new FormData();
     formData.append('file', file);
     try {
-      const res = await fetch('https://saleslens-api.onrender.com/upload',
- { method: 'POST', body: formData });
+      const res = await fetch('https://saleslens.onrender.com/upload',
+  { method: 'POST', body: formData });
       const data = await res.json();
       if (!res.ok) {
         uploadBox.innerHTML = '<div class="upload-icon">❌</div><h3>Error</h3><p>' + (data.detail || 'Something went wrong') + '</p>';
